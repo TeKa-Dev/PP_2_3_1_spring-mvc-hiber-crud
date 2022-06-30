@@ -1,0 +1,51 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+
+<body>
+
+<form action="#" th:action="@{save}" th:object="${user}" method="post">
+
+    <table>
+        <tr>
+            <th><h3>id : </h3> </th>
+        </tr><br><br>
+
+
+        <tr>
+            <td><h3> name     </h3> <input type="text" th:field="*{name}">     </td>
+        </tr><br>
+
+        <tr>
+            <td><h3> lastname </h3> <input type="text" th:field="*{lastname}"> </td>
+        </tr><br>
+
+        <tr>
+            <td> <h3> email   </h3> <input type="text" th:field="*{email}">     </td>
+        </tr><br>
+
+    </table>
+    <br><br>
+    <input type="submit" value="save">
+
+
+
+<!--    <label for="id">id</label>-->
+<!--    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">-->
+<!--    <br>-->
+<!--    <label for="name">name</label>-->
+<!--    <input type="text" th:field="*{name}" id="name" placeholder="name">-->
+<!--    <br>-->
+<!--    <label for="lastname">surname</label>-->
+<!--    <input type="text" th:field="*{lastname}" id="lastname" placeholder="surname">-->
+<!--    <br>-->
+<!--    <label for="email">email</label>-->
+<!--    <input type="text" th:field="*{email}" id="email" placeholder="email">-->
+<!--    <br>-->
+<!--    <input type="submit" value="save">-->
+</form>
+
+</body>
+</html>
