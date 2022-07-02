@@ -5,47 +5,29 @@
 </head>
 
 <body>
-
+<br>
+<h1> Edit </h1>
+<br><br>
 <form action="#" th:action="@{save}" th:object="${user}" method="post">
-
     <table>
         <tr>
-            <th><h3>id : </h3> </th>
-        </tr><br><br>
-
-
-        <tr>
-            <td><h3> name     </h3> <input type="text" th:field="*{name}">     </td>
-        </tr><br>
+            <td>id <label for="id"></label><input readonly type="number" th:field="*{id}" id="id" placeholder="id"></td>
+        </tr>
 
         <tr>
-            <td><h3> lastname </h3> <input type="text" th:field="*{lastname}"> </td>
-        </tr><br>
+            <td><h3> name </h3> <label for="name"></label><input type="text" th:field="*{name}" id="name" placeholder="name"> <br><br><br></td>
+        </tr>
 
         <tr>
-            <td> <h3> email   </h3> <input type="text" th:field="*{email}">     </td>
-        </tr><br>
+            <td><h3> lastname </h3> <label for="lastname"></label><input type="text" th:field="*{lastname}" id="lastname" placeholder="lastname"> <br><br><br></td>
+        </tr>
 
+        <tr>
+            <td><h3> email </h3> <label for="email"></label><input type="text" th:field="*{email}" id="email" placeholder="email"> <br><br><br></td>
+        </tr>
     </table>
-    <br><br>
+
     <input type="submit" value="save">
-
-
-
-<!--    <label for="id">id</label>-->
-<!--    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">-->
-<!--    <br>-->
-<!--    <label for="name">name</label>-->
-<!--    <input type="text" th:field="*{name}" id="name" placeholder="name">-->
-<!--    <br>-->
-<!--    <label for="lastname">surname</label>-->
-<!--    <input type="text" th:field="*{lastname}" id="lastname" placeholder="surname">-->
-<!--    <br>-->
-<!--    <label for="email">email</label>-->
-<!--    <input type="text" th:field="*{email}" id="email" placeholder="email">-->
-<!--    <br>-->
-<!--    <input type="submit" value="save">-->
 </form>
-
 </body>
 </html>
