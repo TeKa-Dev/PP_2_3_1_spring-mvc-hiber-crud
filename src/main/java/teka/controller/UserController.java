@@ -1,10 +1,10 @@
-package web.controller;
+package teka.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import web.model.User;
-import web.service.UserService;
+import teka.model.User;
+import teka.service.UserService;
 
 @Controller
 public class UserController {
@@ -15,9 +15,9 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String showUsers(Model model) {
-        model.addAttribute("users", userService.getUsers());
+        model.addAttribute(userService.getUsers());
         return "users_page";
     }
 
@@ -26,10 +26,10 @@ public class UserController {
         return "edit_page";
     }
 
-    @PostMapping ("/save")
+    @PostMapping("/save")
     public String saveUser(User user) {
         userService.saveUser(user);
-        return "redirect:/";
+        return "redirect:/home";
     }
 
     @GetMapping("/update{id}")
@@ -41,6 +41,7 @@ public class UserController {
     @GetMapping("/delete{id}")
     public String deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
-        return "redirect:/";
+        return "redirect:/home";
     }
 }
+

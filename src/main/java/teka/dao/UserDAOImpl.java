@@ -1,8 +1,7 @@
-package web.dao;
+package teka.dao;
 
 import org.springframework.stereotype.Repository;
-import web.model.User;
-
+import teka.model.User;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
@@ -15,11 +14,11 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public void saveUser(User user) {
-//        if (user.getId() == null) {
-//            entityManager.persist(user);
-//        } else {
+        if (user.getId() == 0L) {
+            entityManager.persist(user);
+        } else {
             entityManager.merge(user);
-//        }
+        }
     }
 
     @Override

@@ -1,5 +1,4 @@
-package web.model;
-
+package teka.model;
 
 import javax.persistence.*;
 
@@ -8,19 +7,21 @@ import javax.persistence.*;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String lastname;
     private String email;
 
-    public User() {}
-
-    public User(String name, String lastname, String email) {
-        this.name = name;
-        this.lastname = lastname;
-        this.email = email;
+    public User() {
+        id = 0L;
     }
+
+//    public User(String name, String lastname, String email) {
+//        this.name = name;
+//        this.lastname = lastname;
+//        this.email = email;
+//    }
 
     public Long getId() {
         return id;
