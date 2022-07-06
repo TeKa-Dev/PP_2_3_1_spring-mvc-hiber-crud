@@ -1,9 +1,9 @@
-package teka.service;
+package mvc.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import teka.dao.UserDAO;
-import teka.model.User;
+import mvc.dao.UserDAO;
+import mvc.model.User;
 
 import java.util.List;
 

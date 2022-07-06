@@ -1,4 +1,4 @@
-package teka.config;
+package mvc.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

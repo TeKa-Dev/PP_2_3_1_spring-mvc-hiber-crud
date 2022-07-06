@@ -1,10 +1,10 @@
-package teka.service;
+package mvc.dao;
 
-import teka.model.User;
+import mvc.model.User;
 
 import java.util.List;
 
-public interface UserService {
+public interface UserDAO {
 
     void saveUser(User user);
 

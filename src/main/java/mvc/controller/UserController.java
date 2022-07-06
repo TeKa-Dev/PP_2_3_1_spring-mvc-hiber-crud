@@ -1,10 +1,10 @@
-package teka.controller;
+package mvc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import teka.model.User;
-import teka.service.UserService;
+import mvc.model.User;
+import mvc.service.UserService;
 
 @Controller
 public class UserController {

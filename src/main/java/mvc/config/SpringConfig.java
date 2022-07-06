@@ -1,4 +1,4 @@
-package teka.config;
+package mvc.config;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -12,7 +12,7 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 @Configuration
-@ComponentScan("teka")
+@ComponentScan("mvc")
 @EnableWebMvc
 public class SpringConfig implements WebMvcConfigurer {
 

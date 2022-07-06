@@ -1,4 +1,4 @@
-package teka.model;
+package mvc.model;
 
 import javax.persistence.*;
 
@@ -8,25 +8,16 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String name;
     private String lastname;
     private String email;
 
-    public User() {
-        id = 0L;
-    }
-
-//    public User(String name, String lastname, String email) {
-//        this.name = name;
-//        this.lastname = lastname;
-//        this.email = email;
-//    }
+    public User() {}
 
     public Long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
@@ -34,7 +25,6 @@ public class User {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -42,7 +32,6 @@ public class User {
     public String getLastname() {
         return lastname;
     }
-
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
@@ -50,7 +39,6 @@ public class User {
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }

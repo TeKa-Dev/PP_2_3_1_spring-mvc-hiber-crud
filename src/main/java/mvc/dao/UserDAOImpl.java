@@ -1,7 +1,7 @@
-package teka.dao;
+package mvc.dao;
 
 import org.springframework.stereotype.Repository;
-import teka.model.User;
+import mvc.model.User;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
